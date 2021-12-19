@@ -26,6 +26,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import HaiderButton from './Components/Button';
 
 const Section: React.FC<{
   title: string;
@@ -73,20 +74,24 @@ const App = () => {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
+            {/* Contained Button */}
+            <View style={{ padding: 15 }} >
+            <HaiderButton
+              text='Some Text'
+              variant="Contained"
+              color='#402f08'
+              textMode="#FFFFFF"
+             />
+            </View>
+            {/* Outlined Button */}
+            <View style={{ padding: 15 }} >
+            <HaiderButton
+              text='Some Text'
+              variant="Outlined"
+              color='#402f08'
+              textMode="#FFFFFF"
+             />
+            </View>
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -97,6 +102,7 @@ const styles = StyleSheet.create({
   sectionContainer: {
     marginTop: 32,
     paddingHorizontal: 24,
+    width: '100%'
   },
   sectionTitle: {
     fontSize: 24,

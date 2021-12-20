@@ -27,6 +27,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import HaiderButton from './Components/Button';
+import HaiderInput from './Components/Input';
 
 const Section: React.FC<{
   title: string;
@@ -79,8 +80,8 @@ const App = () => {
             <HaiderButton
               text='Some Text'
               variant="Contained"
-              color='#402f08'
-              textMode="#FFFFFF"
+              bgColor='#402f08'
+              textMode="Light"
              />
             </View>
             {/* Outlined Button */}
@@ -88,8 +89,14 @@ const App = () => {
             <HaiderButton
               text='Some Text'
               variant="Outlined"
-              color='#402f08'
-              textMode="#FFFFFF"
+              bgColor='#402f08'
+              textMode="Light"
+             />
+            </View>
+
+            {/* Input */}
+            <View style={{ padding: 15 }} >
+            <HaiderInput
              />
             </View>
         </View>

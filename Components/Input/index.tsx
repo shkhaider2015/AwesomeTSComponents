@@ -3,20 +3,21 @@ import styled from "styled-components/native";
 import USER from "../../statics/user.png";
 
 interface IInputView {
-
+    color: string
+    isSelected: boolean
 }
 interface IInputField {
 
 }
-interface IProps {
+interface IProps extends IInputView  {
 
 }
 
-const HaiderInput:FC = () => {
+const HaiderInput:FC<IProps> = (props:IProps) => {
     return <InputTouchable>
-        <InputView>
+        <InputView color={props.color} isSelected={props.isSelected} >
         <InputImage source={USER} />
-            <InputField selectionColor={'red'} ></InputField>
+            <InputField selectionColor={props.color} ></InputField>
         </InputView>
     </InputTouchable>
 }
@@ -24,10 +25,10 @@ const HaiderInput:FC = () => {
 export default HaiderInput;
 
 const InputTouchable = styled.TouchableHighlight``;
-const InputView = styled.View<{}>`
+const InputView = styled.View<IInputView>`
     display: flex;
     flex-direction: row;
-    border: 1px solid black;
+    border: 1px solid ${prop => prop.isSelected ? prop.color : '#bdbdbd' } ;
     border-radius: 8px;
     height: 48%;
     padding-left: 2px;

@@ -13,9 +13,9 @@ interface IProps extends IBtnTextProp {
 }
 
 const HaiderButton:FC<IProps> = (props:IProps) => {
-    return <ButtonContainer activeOpacity={0.8} onPress={() => ""} >
+    return <ButtonContainer underlayColor={"#9f90e8"} activeOpacity={0.8} onPress={() => ""} >
             <ButtonView variant={props.variant} bgColor={props.bgColor}  >
-                <ButtonText textMode={props.textMode} variant={props.variant} bgColor={props.bgColor} >{props.text}</ButtonText>
+                <ButtonText  textMode={props.textMode} variant={props.variant} bgColor={props.bgColor} >{props.text}</ButtonText>
             </ButtonView>
     </ButtonContainer>
 }

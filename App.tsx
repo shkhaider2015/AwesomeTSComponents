@@ -80,7 +80,7 @@ const App = () => {
             <HaiderButton
               text='Some Text'
               variant="Contained"
-              bgColor='#402f08'
+              bgColor='#190191'
               textMode="Light"
              />
             </View>
@@ -89,7 +89,7 @@ const App = () => {
             <HaiderButton
               text='Some Text'
               variant="Outlined"
-              bgColor='#402f08'
+              bgColor='#190191'
               textMode="Light"
              />
             </View>
@@ -97,6 +97,8 @@ const App = () => {
             {/* Input */}
             <View style={{ padding: 15 }} >
             <HaiderInput
+              color='#190191'
+              isSelected={true}
              />
             </View>
         </View>
